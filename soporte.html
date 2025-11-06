@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - QuimiTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-flask me-2"></i>QuimiTech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="licencias.html">Licencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="soporte.html">Soporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Soporte Técnico</h1>
+            <p class="hero-subtitle">Asistencia técnica, reporte de bugs y preguntas frecuentes sobre QuimiTech</p>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <!-- Bug Reporting -->
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="support-content">
+                            <h3>Reportar Bugs y Errores</h3>
+                            <p>Si experimentas crashes, errores o comportamiento inesperado, sigue este procedimiento:</p>
+                            <div class="bug-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <div class="step-content">
+                                        <h5>Recolectar Logs</h5>
+                                        <p>Localiza y comprime la carpeta <code>/logs</code> generada por la aplicación</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <div class="step-content">
+                                        <h5>Capturar Evidencia</h5>
+                                        <p>Toma capturas de pantalla o graba un video mostrando el error</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <div class="step-content">
+                                        <h5>Enviar Reporte</h5>
+                                        <p>Envía los archivos a <strong>sandulientos@protonmail.com</strong> con una descripción detallada</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ -->
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="support-content">
+                            <h3>Preguntas Frecuentes</h3>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <h5>¿Qué requisitos de sistema tiene QuimiTech?</h5>
+                                    <p>Windows x64 con .NET 9. Exclusivamente desarrollado para esta plataforma.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h5>¿Cómo recibo las actualizaciones?</h5>
+                                    <p>Las actualizaciones se entregan via MediaFire. Los usuarios con licencia de lanzamiento reciben actualizaciones gratuitas hasta el 5 de Mayo 2025.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h5>¿El software es portable?</h5>
+                                    <p>Actualmente requiere configuración manual. Se planea desarrollar un instalador automático en futuras versiones.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h5>¿Qué hago si el software no inicia?</h5>
+                                    <p>Verifica que tengas .NET 9 instalado y envía un reporte de error con los logs generados.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Roadmap -->
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="support-content">
+                            <h3>Próximas Características</h3>
+                            <div class="roadmap-list">
+                                <div class="roadmap-item">
+                                    <i class="fas fa-paint-brush"></i>
+                                    <div>
+                                        <h6>Mejoras Gráficas</h6>
+                                        <p>Interfaz más moderna y responsive</p>
+                                    </div>
+                                </div>
+                                <div class="roadmap-item">
+                                    <i class="fas fa-expand"></i>
+                                    <div>
+                                        <h6>Compatibilidad de Pantallas</h6>
+                                        <p>Mejor adaptación a diferentes resoluciones</p>
+                                    </div>
+                                </div>
+                                <div class="roadmap-item">
+                                    <i class="fas fa-robot"></i>
+                                    <div>
+                                        <h6>Más Automatizaciones</h6>
+                                        <p>Nuevas funciones de automatización química</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info support-contact">
+                        <h3 class="text-center">Contacto de Soporte</h3>
+                        <p class="text-center">Para asistencia técnica directa, utiliza los siguientes canales:</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 text-center mb-4">
+                                <div class="contact-method">
+                                    <i class="fab fa-github"></i>
+                                    <h4>GitHub</h4>
+                                    <p><a href="https://github.com/MauroKpoxD" target="_blank">@MauroKpoxD</a></p>
+                                    <small>Repositorio del proyecto</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center mb-4">
+                                <div class="contact-method">
+                                    <i class="fas fa-envelope"></i>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:sandulientos@protonmail.com">sandulientos@protonmail.com</a></p>
+                                    <small>Respuesta en 24 horas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>&copy; 2025 QuimiTech Project. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="licencias.html">Licencias</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

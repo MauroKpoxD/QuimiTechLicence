@@ -1,0 +1,825 @@
+:root {
+    --quimitech-dark: #1f1f1f;
+    --quimitech-blue: #00b4ff;
+    --quimitech-dark-blue: #0088cc;
+    --quimitech-gray: #787878;
+    --quimitech-light: #f8f9fa;
+    --quimitech-dark-bg: #1a1a1a;
+    --text-dark: #ffffff;
+    --text-light: #333333;
+    --card-bg-dark: #2a2a2a;
+    --card-bg-light: #ffffff;
+    --paragraph-color: #a0c8ff;
+    --paragraph-light: #2c5aa0;
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --border-light: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] {
+    --quimitech-dark: #f8f9fa;
+    --quimitech-dark-bg: #ffffff;
+    --text-dark: #333333;
+    --text-light: #333333;
+    --card-bg-dark: #ffffff;
+    --card-bg-light: #ffffff;
+    --paragraph-color: #2c5aa0;
+    --border-dark: rgba(0, 0, 0, 0.1);
+    --border-light: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--quimitech-dark-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Mejora en la legibilidad de párrafos */
+p {
+    color: var(--paragraph-color);
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+[data-theme="light"] p {
+    color: var(--paragraph-light);
+}
+
+/* Navbar mejorada */
+.navbar {
+    background-color: var(--quimitech-dark) !important;
+    padding: 0.8rem 0;
+    border-bottom: 2px solid var(--quimitech-blue);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--quimitech-blue) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--quimitech-blue) !important;
+    background-color: rgba(0, 180, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-toggle:hover {
+    color: var(--quimitech-blue);
+    background-color: rgba(0, 180, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Hero section mejorada */
+.hero-section {
+    background: linear-gradient(135deg, rgba(31, 31, 31, 0.95) 0%, rgba(26, 26, 26, 0.98) 100%), 
+                url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--quimitech-blue) 0%, transparent 50%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+[data-theme="light"] .hero-section {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%), 
+                url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--quimitech-blue);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    color: var(--text-dark);
+    opacity: 0.9;
+    font-weight: 400;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+}
+
+/* Botones mejorados */
+.btn-quimitech {
+    background: linear-gradient(135deg, var(--quimitech-blue) 0%, var(--quimitech-dark-blue) 100%);
+    color: #000000;
+    font-weight: 600;
+    padding: 14px 35px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 180, 255, 0.3);
+    font-size: 1.1rem;
+}
+
+.btn-quimitech::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--quimitech-dark-blue) 0%, var(--quimitech-blue) 100%);
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.btn-quimitech:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 180, 255, 0.4);
+    color: #000000;
+}
+
+.btn-quimitech:hover::before {
+    left: 0;
+}
+
+/* Secciones mejoradas */
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--quimitech-blue);
+    font-weight: 700;
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--quimitech-blue) 0%, var(--quimitech-dark-blue) 100%);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.features-section {
+    padding: 100px 0;
+    background-color: var(--quimitech-dark);
+    position: relative;
+}
+
+[data-theme="light"] .features-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Feature cards mejoradas */
+.feature-card {
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.95) 100%);
+    border-radius: 16px;
+    padding: 35px 25px;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-left: 4px solid var(--quimitech-blue);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 180, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-left-color: var(--quimitech-dark-blue);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--quimitech-blue);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    color: var(--paragraph-color);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+[data-theme="light"] .feature-card p {
+    color: var(--paragraph-light);
+}
+
+/* Screenshots section mejorada */
+.screenshots-section {
+    padding: 100px 0;
+    background-color: var(--quimitech-dark-bg);
+}
+
+.screenshot-card {
+    background: var(--card-bg-dark);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-dark);
+}
+
+.screenshot-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.screenshot-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-card:hover img {
+    transform: scale(1.05);
+}
+
+.screenshot-card .card-body {
+    padding: 25px;
+}
+
+.screenshot-card h4 {
+    color: var(--quimitech-blue);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Offers section mejorada */
+.offers-section, .content-section {
+    padding: 100px 0;
+    background-color: var(--quimitech-dark);
+    position: relative;
+}
+
+[data-theme="light"] .offers-section,
+[data-theme="light"] .content-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.offer-card {
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.95) 100%);
+    border-radius: 20px;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 2px solid transparent;
+}
+
+.offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--quimitech-blue) 0%, var(--quimitech-dark-blue) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.offer-card:hover::before {
+    opacity: 1;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 180, 255, 0.2);
+}
+
+.offer-card.highlight {
+    border: 2px solid var(--quimitech-blue);
+    transform: scale(1.02);
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.98) 100%);
+}
+
+.offer-card.highlight::before {
+    opacity: 1;
+}
+
+.offer-card.highlight:hover {
+    transform: scale(1.02) translateY(-10px);
+}
+
+.offer-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: linear-gradient(135deg, var(--quimitech-blue) 0%, var(--quimitech-dark-blue) 100%);
+    color: #000000;
+    padding: 8px 45px;
+    transform: rotate(45deg);
+    font-weight: 700;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 180, 255, 0.3);
+}
+
+.offer-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.offer-price {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--quimitech-blue);
+    margin: 2rem 0;
+    text-shadow: 0 2px 10px rgba(0, 180, 255, 0.3);
+}
+
+.offer-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.offer-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.offer-features li:last-child {
+    border-bottom: none;
+}
+
+.offer-features li::before {
+    content: "✓";
+    color: var(--quimitech-blue);
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+/* Contact section mejorada */
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--quimitech-dark-bg);
+    position: relative;
+}
+
+.contact-info {
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.95) 100%);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-dark);
+}
+
+.contact-info h3 {
+    color: var(--quimitech-blue);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.location-info {
+    background: linear-gradient(135deg, rgba(0, 180, 255, 0.08) 0%, rgba(0, 136, 204, 0.05) 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid var(--quimitech-blue);
+    border: 1px solid rgba(0, 180, 255, 0.2);
+}
+
+/* Terms and Support Styles mejorados */
+.terms-content {
+    margin-top: 3rem;
+}
+
+.term-card {
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.95) 100%);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--quimitech-blue);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.term-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.term-card h3 {
+    color: var(--quimitech-blue);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.update-policy {
+    list-style: none;
+    padding: 0;
+}
+
+.update-policy li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-policy li:last-child {
+    border-bottom: none;
+}
+
+.support-card {
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.95) 100%);
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--border-dark);
+    align-items: flex-start;
+}
+
+.support-icon {
+    font-size: 2.5rem;
+    color: var(--quimitech-blue);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.support-content {
+    flex: 1;
+}
+
+.support-content h3 {
+    color: var(--quimitech-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.bug-steps {
+    margin-top: 25px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.step-number {
+    background: linear-gradient(135deg, var(--quimitech-blue) 0%, var(--quimitech-dark-blue) 100%);
+    color: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 180, 255, 0.3);
+}
+
+.step-content h5 {
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.faq-list, .roadmap-list {
+    margin-top: 25px;
+}
+
+.faq-item, .roadmap-item {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.faq-item:last-child, .roadmap-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h5 {
+    color: var(--quimitech-blue);
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.roadmap-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.roadmap-item i {
+    color: var(--quimitech-blue);
+    font-size: 1.4rem;
+}
+
+.roadmap-item h6 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.support-contact {
+    margin-top: 50px;
+}
+
+.contact-method {
+    padding: 25px;
+    background: linear-gradient(145deg, var(--card-bg-dark) 0%, rgba(42, 42, 42, 0.95) 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid var(--border-dark);
+}
+
+.contact-method:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-method i {
+    font-size: 3rem;
+    color: var(--quimitech-blue);
+    margin-bottom: 20px;
+}
+
+.contact-method h4 {
+    color: var(--quimitech-blue);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Footer mejorado */
+footer {
+    background: linear-gradient(135deg, var(--quimitech-dark) 0%, #2a2a2a 100%);
+    padding: 50px 0 25px;
+    border-top: 1px solid var(--border-dark);
+    position: relative;
+}
+
+[data-theme="light"] footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid var(--border-light);
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links a {
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--quimitech-blue);
+    background-color: rgba(0, 180, 255, 0.1);
+}
+
+/* Responsive mejorado */
+@media (max-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 80px;
+        background-attachment: scroll;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .offer-card.highlight {
+        transform: none;
+        margin-bottom: 2rem;
+    }
+    
+    .offer-card.highlight:hover {
+        transform: translateY(-8px);
+    }
+    
+    .support-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        text-align: center;
+        margin: 0.2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .features-section,
+    .screenshots-section,
+    .offers-section,
+    .contact-section,
+    .content-section {
+        padding: 60px 0;
+    }
+    
+    .feature-card,
+    .offer-card,
+    .contact-info {
+        padding: 25px 20px;
+    }
+    
+    .offer-price {
+        font-size: 2.5rem;
+    }
+    
+    .btn-quimitech {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus visible para accesibilidad */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--quimitech-blue);
+    outline-offset: 2px;
+}
+
+/* Loading states */
+.btn-quimitech:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(0, 180, 255, 0.3);
+}
