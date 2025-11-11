@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licencias y Términos - QuimiTech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Licencias y Precios - QuimiTech | Planes y Métodos de Pago</title>
+    <meta name="description" content="Elige tu plan QuimiTech: Prueba gratuita, 6 meses, 1 año o licencia permanente ONE SHOT. Métodos de pago: Mercado Pago, efectivo, Bitcoin.">
+    <meta name="theme-color" content="#0a1929">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-theme="dark">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-flask me-2"></i>QuimiTech
+                <img src="images/logo.png" alt="QuimiTech Logo" height="40" class="d-inline-block align-text-top me-2">
+                QuimiTech
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="licencias.html">Licencias</a>
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="licencias.html">Licencias</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="soporte.html">Soporte</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link theme-toggle" id="themeToggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
+                
+                <button class="btn btn-outline-primary ms-3" id="themeToggle">
+                    <i class="bi bi-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -42,94 +53,468 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>Licencias y Términos</h1>
-            <p class="hero-subtitle">Información detallada sobre licencias, términos de uso y políticas de QuimiTech</p>
-        </div>
-    </section>
-
-    <!-- Offers Section -->
-    <section class="offers-section">
-        <div class="container">
-            <h2 class="section-title">Ofertas de Licencia</h2>
-            <div class="row g-4">
+            <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
-                    <div class="offer-card highlight">
-                        <div class="offer-badge">OFERTA ESPECIAL</div>
-                        <h3>Licencia de Lanzamiento</h3>
-                        <p class="text-muted">Válido hasta: 5 de Mayo 2025</p>
-                        <div class="offer-price">$4.999 ARS</div>
-                        <ul class="offer-features">
-                            <li>Licencia perpetua por equipo</li>
-                            <li>Actualizaciones GRATIS hasta el 5 de mayo 2025</li>
-                            <li>Soporte prioritario hasta 5 Mayo 2025</li>
-                            <li>Acceso a documentación exclusiva</li>
-                            <li>Entrega via MediaFire</li>
-                            <li>Posibilidad de sugerir nuevas funciones</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-quimitech w-100">Obtener Oferta</a>
+                    <div class="badge bg-success mb-3">
+                        <i class="bi bi-shield-check me-1"></i>
+                        Garantía de 10 días
+                    </div>
+                    
+                    <h1 class="hero-title mb-4">
+                        Elige tu 
+                        <span class="text-primary">Licencia Perfecta</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle mb-4">
+                        Planes flexibles para estudiantes, laboratorios y profesionales. 
+                        Sin compromisos a largo plazo y con actualizaciones gratuitas incluidas.
+                    </p>
+
+                    <div class="specs-grid mb-4">
+                        <div class="spec-item">
+                            <i class="bi bi-arrow-clockwise text-primary"></i>
+                            <span>Actualizaciones Gratuitas</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-headset text-primary"></i>
+                            <span>Soporte por Email</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-shield-check text-primary"></i>
+                            <span>Garantía 10 Días</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-phone text-primary"></i>
+                            <span>1 Dispositivo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#planes" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-credit-card me-2"></i>
+                            Ver Planes
+                        </a>
+                        <a href="contacto.html" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-download me-2"></i>
+                            Demo Gratis
+                        </a>
                     </div>
                 </div>
+                
                 <div class="col-lg-6">
-                    <div class="offer-card">
-                        <h3>Licencia Regular</h3>
-                        <p class="text-muted">A partir del 6 de Mayo 2025</p>
-                        <div class="offer-price">$5.999 ARS</div>
-                        <ul class="offer-features">
-                            <li>Licencia perpetua por equipo</li>
-                            <li>Actualizaciones por separado</li>
-                            <li>Soporte básico por 6 meses</li>
-                            <li>Acceso a documentación estándar</li>
-                            <li>Entrega via MediaFire</li>
-                            <li>Mantenimiento de funcionalidades existentes</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-quimitech w-100">Obtener Licencia</a>
+                    <div class="text-center">
+                        <div class="value-badges">
+                            <div class="value-badge feature-card m-2">
+                                <div class="value-number">30</div>
+                                <div class="value-label">Días Gratis</div>
+                            </div>
+                            <div class="value-badge feature-card m-2">
+                                <div class="value-number">5K</div>
+                                <div class="value-label">Ahorro ONE SHOT</div>
+                            </div>
+                            <div class="value-badge feature-card m-2">
+                                <div class="value-number">100%</div>
+                                <div class="value-label">Portable</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Terms Section -->
-    <section class="content-section">
+    <!-- Planes de Licencia -->
+    <section id="planes" class="pricing-section py-5">
         <div class="container">
-            <h2 class="section-title">Términos y Condiciones</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="terms-content">
-                        <div class="term-card">
-                            <h3><i class="fas fa-file-contract me-2"></i>Licencia y Uso</h3>
-                            <p>Licencia perpetua por equipo para Windows x64 .NET 9. Prohibida la redistribución y reventa del software.</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Planes de Licencia</h2>
+                <p class="section-subtitle">Elige el plan que mejor se adapte a tus necesidades</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Prueba 1 Mes -->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="feature-card">
+                        <div class="pricing-header text-center">
+                            <h5 class="pricing-title">Prueba 1 Mes</h5>
+                            <div class="price">$0</div>
+                            <p class="period">30 días gratis</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Acceso completo al software</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Todas las funciones incluidas</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Cualquier dispositivo</li>
+                            <li><i class="bi bi-x-circle text-secondary"></i> Sin soporte prioritario</li>
+                            <li><i class="bi bi-x-circle text-secondary"></i> Sin actualizaciones automáticas</li>
+                        </ul>
+                        
+                        <div class="pricing-actions">
+                            <a href="contacto.html" class="btn btn-outline-primary w-100">
+                                Comenzar Prueba
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 Meses -->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="feature-card border-primary">
+                        <div class="text-center mb-3">
+                            <span class="badge bg-primary">Más Popular</span>
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="pricing-title">6 Meses</h5>
+                            <div class="price">$12,000</div>
+                            <p class="period">$2,000/mes · Total $12,000</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Todo lo de Prueba +</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Soporte técnico prioritario</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Actualizaciones gratuitas</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> 1 dispositivo activo</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Backup de licencia</li>
+                        </ul>
+                        
+                        <div class="pricing-actions">
+                            <a href="contacto.html" class="btn btn-primary w-100">
+                                Comprar 6 Meses
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1 Año -->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="feature-card">
+                        <div class="pricing-header text-center">
+                            <h5 class="pricing-title">1 Año</h5>
+                            <div class="price">$19,000</div>
+                            <p class="period">Ahorras $5,000 vs mensual</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Todo lo de 6 meses +</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> 2 personalizaciones menores</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Migración de datos incluida</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Capacitación online</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Prioridad en soporte</li>
+                        </ul>
+                        
+                        <div class="pricing-actions">
+                            <a href="contacto.html" class="btn btn-outline-primary w-100">
+                                Comprar 1 Año
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ONE SHOT -->
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="feature-card border-warning">
+                        <div class="text-center mb-3">
+                            <span class="badge bg-warning">ONE SHOT</span>
+                        </div>
+                        <div class="pricing-header text-center">
+                            <h5 class="pricing-title">Licencia Permanente</h5>
+                            <div class="price">$350,000</div>
+                            <p class="period">Pago único · Para siempre</p>
+                        </div>
+                        
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Licencia permanente</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> 5 dispositivos diferentes</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Soporte de por vida</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Actualizaciones gratuitas</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> Personalización incluida</li>
+                        </ul>
+
+                        <div class="pricing-note">
+                            <small class="text-muted">* Opción KIT equipo: 20 personas x $2,000 c/u</small>
+                        </div>
+                        
+                        <div class="pricing-actions">
+                            <a href="contacto.html" class="btn btn-outline-primary w-100">
+                                Solicitar ONE SHOT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativa -->
+            <div class="comparison-section mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="feature-card">
+                            <h4 class="text-center mb-4">Comparativa de Planes</h4>
+                            <div class="table-responsive">
+                                <table class="table comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Característica</th>
+                                            <th>Prueba</th>
+                                            <th>6 Meses</th>
+                                            <th>1 Año</th>
+                                            <th>ONE SHOT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Precio</td>
+                                            <td>$0</td>
+                                            <td>$12,000</td>
+                                            <td>$19,000</td>
+                                            <td>$350,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Duración</td>
+                                            <td>30 días</td>
+                                            <td>6 meses</td>
+                                            <td>1 año</td>
+                                            <td>Permanente</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dispositivos</td>
+                                            <td>Ilimitado*</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actualizaciones</td>
+                                            <td>No</td>
+                                            <td>Sí</td>
+                                            <td>Sí</td>
+                                            <td>Sí</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Soporte</td>
+                                            <td>Básico</td>
+                                            <td>Prioritario</td>
+                                            <td>Premium</td>
+                                            <td>Vitalicio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garantía</td>
+                                            <td>-</td>
+                                            <td>10 días</td>
+                                            <td>10 días</td>
+                                            <td>10 días</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="comparison-note text-center mt-3">
+                                <small class="text-muted">* La versión de prueba se bloquea después de 30 días</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Métodos de Pago -->
+    <section id="pagos" class="payment-section py-5 bg-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="feature-card">
+                        <h3 class="text-center mb-4">Métodos de Pago</h3>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="payment-method">
+                                    <div class="payment-icon">
+                                        <i class="bi bi-wallet2"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h5>Mercado Pago</h5>
+                                        <p class="text-muted">Pago online inmediato con link de pago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="payment-method">
+                                    <div class="payment-icon">
+                                        <i class="bi bi-cash"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h5>Efectivo</h5>
+                                        <p class="text-muted">Sarmiento, Once, Moreno - Bs As, Argentina</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="payment-method">
+                                    <div class="payment-icon">
+                                        <i class="bi bi-currency-bitcoin"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h5>Bitcoin (Próximamente)</h5>
+                                        <p class="text-muted">Pagos con criptomonedas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="payment-method">
+                                    <div class="payment-icon">
+                                        <i class="bi bi-bank"></i>
+                                    </div>
+                                    <div class="payment-info">
+                                        <h5>Transferencia Bancaria</h5>
+                                        <p class="text-muted">BCRA - Próximamente disponible</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="term-card">
-                            <h3><i class="fas fa-shield-alt me-2"></i>Protección Anti-Piratería</h3>
-                            <p>Sin garantías contra piratería. En caso de violación de términos, la licencia será revocada y el software bloqueado mediante firma de hardware.</p>
+                        <div class="payment-process mt-5">
+                            <h5 class="text-center mb-4">Proceso de Compra</h5>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h6>Contacto</h6>
+                                        <p>Envías un email solicitando la licencia deseada</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h6>Pago</h6>
+                                        <p>Se te envía el método de pago correspondiente</p>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h6>Activación</h6>
+                                        <p>Recibes el software activado por email en 24-48hs</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <div class="term-card">
-                            <h3><i class="fas fa-bug me-2"></i>Soporte Técnico</h3>
-                            <p>Soporte gratuito para crashes, errores y reporte de bugs hasta el 5 de Mayo 2025. Reportar enviando carpeta /logs y multimedia del error.</p>
-                        </div>
+    <!-- Términos y Condiciones -->
+    <section id="tyc" class="terms-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="feature-card">
+                        <h3 class="text-center mb-5">Términos y Condiciones</h3>
+                        
+                        <div class="terms-content">
+                            <!-- Política de Reembolsos -->
+                            <div class="term-item mb-4">
+                                <h5>
+                                    <i class="bi bi-arrow-return-left text-primary me-2"></i>
+                                    Política de Reembolsos
+                                </h5>
+                                <div class="term-details">
+                                    <p><strong>10 días de garantía:</strong> Si el software no cumple con tus expectativas, tienes 10 días para solicitar un reembolso completo.</p>
+                                    <ul>
+                                        <li>Válido para licencias pagas (6 meses, 1 año, ONE SHOT)</li>
+                                        <li>No aplicable para versión de prueba gratuita</li>
+                                        <li>Excepciones discutibles caso por caso</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                        <div class="term-card">
-                            <h3><i class="fas fa-sync-alt me-2"></i>Política de Actualizaciones</h3>
-                            <ul class="update-policy">
-                                <li><strong>Actualizaciones menores:</strong> $499 ARS (bug fixes, mejoras UI)</li>
-                                <li><strong>Actualizaciones mayores:</strong> $1.999 ARS (nuevas funciones)</li>
-                                <li><strong>Actualizaciones variables:</strong> Precio según tamaño de la actualización</li>
-                                <li><strong>Nuevas versiones:</strong> Precio especial para usuarios existentes</li>
-                            </ul>
-                        </div>
+                            <!-- Uso de Licencia -->
+                            <div class="term-item mb-4">
+                                <h5>
+                                    <i class="bi bi-shield-check text-primary me-2"></i>
+                                    Uso de Licencia
+                                </h5>
+                                <div class="term-details">
+                                    <ul>
+                                        <li><strong>Uso comercial permitido</strong> en todos los planes</li>
+                                        <li><strong>Backups:</strong> No aplica ya que el software no guarda datos internamente</li>
+                                        <li><strong>Exportación:</strong> Los documentos se generan externamente al software</li>
+                                        <li><strong>Sin límites:</strong> No hay restricciones de uso al ser totalmente local</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                        <div class="term-card">
-                            <h3><i class="fas fa-user-shield me-2"></i>Privacidad y Datos</h3>
-                            <p>El software solo recopila logs de uso que son de código abierto. No se recopilan datos personales del usuario.</p>
-                        </div>
+                            <!-- Actualizaciones -->
+                            <div class="term-item mb-4">
+                                <h5>
+                                    <i class="bi bi-arrow-clockwise text-primary me-2"></i>
+                                    Política de Actualizaciones
+                                </h5>
+                                <div class="term-details">
+                                    <ul>
+                                        <li><strong>Versión de prueba:</strong> No incluye actualizaciones automáticas</li>
+                                        <li><strong>Licencias pagas:</strong> Todas las actualizaciones menores y mayores incluidas</li>
+                                        <li><strong>ONE SHOT:</strong> Actualizaciones gratuitas de por vida</li>
+                                        <li>Las actualizaciones se envían por email al activar la licencia</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                        <div class="term-card">
-                            <h3><i class="fas fa-ban me-2"></i>Uso Aceptable</h3>
-                            <p>Prohibido el uso para actividades ilícitas. La licencia es válida únicamente con el pago completo y se limita a un equipo por licencia.</p>
+                            <!-- Soporte Técnico -->
+                            <div class="term-item mb-4">
+                                <h5>
+                                    <i class="bi bi-headset text-primary me-2"></i>
+                                    Soporte Técnico
+                                </h5>
+                                <div class="term-details">
+                                    <ul>
+                                        <li><strong>Email:</strong> sandulientos827@protonmail.com</li>
+                                        <li><strong>Tiempo de respuesta:</strong> 48 horas máximo</li>
+                                        <li><strong>Reporte de bugs:</strong> Incluir logs adjuntos</li>
+                                        <li><strong>Piratería:</strong> Licencias duplicadas serán revocadas</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- ONE SHOT Especial -->
+                            <div class="term-item">
+                                <h5>
+                                    <i class="bi bi-star-fill text-warning me-2"></i>
+                                    Condiciones ONE SHOT
+                                </h5>
+                                <div class="term-details">
+                                    <ul>
+                                        <li><strong>5 dispositivos:</strong> Licencia válida para 5 equipos diferentes</li>
+                                        <li><strong>Opción KIT equipo:</strong> 20 personas x $2,000 c/u = $40,000 total</li>
+                                        <li><strong>Personalización:</strong> Modificaciones menores incluidas</li>
+                                        <li><strong>Soporte vitalicio:</strong> Asistencia técnica permanente</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="cta-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title">¿Tienes dudas sobre las licencias?</h2>
+                        <p class="cta-subtitle">Contáctanos y te ayudamos a elegir el plan perfecto</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contacto.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>
+                            Contactar
+                        </a>
                     </div>
                 </div>
             </div>
@@ -137,23 +522,79 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer py-5">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="images/logo.png" alt="QuimiTech" height="40" class="me-2">
+                        QuimiTech
+                    </div>
+                    <p class="footer-text">
+                        Software especializado en automatización de procesos para laboratorios químicos y estudiantes.
+                    </p>
+                    <div class="footer-meta">
+                        <small><i class="bi bi-windows me-1"></i> Windows 8+ · Portable .exe · v2.0.6</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Software</h6>
+                    <ul class="footer-links">
+                        <li><a href="software.html">Características</a></li>
+                        <li><a href="software.html#funciones">Funciones</a></li>
+                        <li><a href="software.html#requisitos">Requisitos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Licencias</h6>
+                    <ul class="footer-links">
+                        <li><a href="licencias.html">Planes</a></li>
+                        <li><a href="licencias.html#pagos">Pagos</a></li>
+                        <li><a href="licencias.html#tyc">Términos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Soporte</h6>
+                    <ul class="footer-links">
+                        <li><a href="soporte.html">FAQ</a></li>
+                        <li><a href="soporte.html#bugs">Reportar Bugs</a></li>
+                        <li><a href="soporte.html#updates">Actualizaciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="footer-title">Contacto</h6>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Email</a></li>
+                        <li><a href="licencias.html#pagos">Métodos de Pago</a></li>
+                        <li><a href="soporte.html">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p>&copy; 2025 QuimiTech Project. Todos los derechos reservados.</p>
+                    <p class="footer-copyright">
+                        &copy; 2025 QuimiTech. v2.0.6 · .NET Framework
+                    </p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="footer-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="soporte.html">Soporte</a></li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="licencias.html#privacidad">Privacidad</a>
+                        <a href="licencias.html#terminos">Términos</a>
+                        <a href="licencias.html#reembolsos">Reembolsos</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

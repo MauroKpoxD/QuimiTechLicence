@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuimiTech - Automatización de Procesos Químicos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>QuimiTech - Software para Laboratorios Químicos</title>
+    <meta name="description" content="Software especializado en análisis químico, cálculos de concentración y automatización de laboratorios. Versión 2.0.6 para Windows.">
+    <meta name="theme-color" content="#0a1929">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-theme="dark">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-flask me-2"></i>QuimiTech
+                <img src="images/logo.png" alt="QuimiTech Logo" height="40" class="d-inline-block align-text-top me-2">
+                QuimiTech
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="licencias.html">Licencias</a>
@@ -30,11 +39,13 @@
                         <a class="nav-link" href="soporte.html">Soporte</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link theme-toggle" id="themeToggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
+                
+                <button class="btn btn-outline-primary ms-3" id="themeToggle">
+                    <i class="bi bi-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -42,105 +53,156 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>QuimiTech v2.0.5</h1>
-            <p class="hero-subtitle">Software especializado en automatización de procesos químicos para Windows. Análisis cualitativos, cálculos de laboratorio y más.</p>
-            <a href="licencias.html" class="btn btn-quimitech me-3">Ver Licencias</a>
-            <a href="soporte.html" class="btn btn-outline-light">Soporte Técnico</a>
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="version-badge mb-3">
+                        <span class="badge bg-primary">v2.0.6</span>
+                        <span class="ms-2">Última versión estable</span>
+                    </div>
+                    
+                    <h1 class="hero-title mb-4">
+                        Automatización Inteligente para 
+                        <span class="text-primary">Laboratorios Químicos</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle mb-4">
+                        Software especializado en Windows (.NET Framework) que automatiza cálculos complejos, 
+                        análisis cualitativos y gestiona procesos de laboratorio de forma eficiente.
+                    </p>
+
+                    <div class="specs-grid mb-4">
+                        <div class="spec-item">
+                            <i class="bi bi-windows"></i>
+                            <span>Windows 8+</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-cpu"></i>
+                            <span>4GB RAM</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-hdd"></i>
+                            <span>500MB HDD</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-box"></i>
+                            <span>Portable .exe</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="contacto.html" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-download me-2"></i>
+                            Descargar Demo
+                        </a>
+                        <a href="software.html" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-play-circle me-2"></i>
+                            Ver Funciones
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="software-showcase">
+                        <img src="images/dashboard.png" alt="Dashboard QuimiTech v2.0.6" class="showcase-image img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features-section">
+    <section class="features-section py-5">
         <div class="container">
-            <h2 class="section-title">Características Principales</h2>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Funciones Principales</h2>
+                <p class="section-subtitle">Todo lo que necesitas para optimizar tu trabajo en el laboratorio</p>
+            </div>
+            
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-3">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-vial"></i>
+                            <i class="bi bi-clipboard-data"></i>
                         </div>
-                        <h3>Análisis Cualitativo</h3>
-                        <p>Identificación precisa de componentes químicos mediante análisis sistemático y automatizado.</p>
+                        <h4>Análisis Cualitativo</h4>
+                        <p>Identificación y clasificación de compuestos químicos con precisión</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                
+                <div class="col-md-6 col-lg-3">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-ruler-combined"></i>
+                            <i class="bi bi-calculator"></i>
                         </div>
-                        <h3>Regla de Dos Simple</h3>
-                        <p>Cálculos rápidos y precisos para determinar proporciones y relaciones químicas.</p>
+                        <h4>Cálculos de Concentración</h4>
+                        <p>Cálculos precisos de diluciones y concentraciones automáticas</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                
+                <div class="col-md-6 col-lg-3">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-calculator"></i>
+                            <i class="bi bi-graph-up"></i>
                         </div>
-                        <h3>Cálculo de CyD</h3>
-                        <p>Herramientas especializadas para cálculos de concentración y dilución de soluciones.</p>
+                        <h4>Regla de Tres Simple</h4>
+                        <p>Cálculos rápidos y eficientes para conversiones y proporciones</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                
+                <div class="col-md-6 col-lg-3">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
+                            <i class="bi bi-stars"></i>
                         </div>
-                        <h3>Automatización Avanzada</h3>
-                        <p>Reducción de tiempo en procesos repetitivos con algoritmos optimizados.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Análisis de Resultados</h3>
-                        <p>Visualización clara de datos con gráficos y tablas para una mejor interpretación.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Windows x64 .NET 9</h3>
-                        <p>Desarrollado en WinForms .NET 9 para máximo rendimiento en Windows.</p>
+                        <h4>Unidades Astronómicas</h4>
+                        <p>Calculadora especializada para conversiones de unidades astronómicas</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots-section">
+    <!-- Benefits Section -->
+    <section class="benefits-section py-5 bg-dark">
         <div class="container">
-            <h2 class="section-title">Interfaz en Desarrollo</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="screenshot-card">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Interfaz principal">
-                        <div class="card-body">
-                            <h4>Interfaz Principal</h4>
-                            <p>Diseño intuitivo con acceso rápido a todas las funcionalidades.</p>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/analisis-cualitativo.png" alt="Análisis Cualitativo" class="img-fluid rounded-3 shadow-lg">
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="screenshot-card">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Análisis cualitativo">
-                        <div class="card-body">
-                            <h4>Análisis Cualitativo</h4>
-                            <p>Herramientas especializadas para identificación de componentes.</p>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">Ahorra Tiempo y Elimina Errores</h2>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill text-primary"></i>
+                            <div>
+                                <h5>80% Menos Tiempo en Cálculos</h5>
+                                <p>Automatiza procesos que antes tomaban horas</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="screenshot-card">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Cálculos de CyD">
-                        <div class="card-body">
-                            <h4>Cálculos de CyD</h4>
-                            <p>Interfaz para cálculos de concentración y dilución.</p>
+                        
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill text-primary"></i>
+                            <div>
+                                <h5>0% Errores Manuales</h5>
+                                <p>Elimina errores humanos en cálculos complejos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill text-primary"></i>
+                            <div>
+                                <h5>100% Portable</h5>
+                                <p>Ejecutable directo sin instalación complicada</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="bi bi-check-circle-fill text-primary"></i>
+                            <div>
+                                <h5>Actualizaciones Gratuitas</h5>
+                                <p>Todas las mejoras incluidas con tu licencia</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,48 +210,20 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
         <div class="container">
-            <h2 class="section-title">Contacto y Adquisición</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="contact-info">
-                        <h3 class="text-center">¿Listo para automatizar tus procesos químicos?</h3>
-                        <p class="text-center">Contactanos para adquirir tu licencia, consultar precios o resolver dudas técnicas.</p>
-                        
-                        <div class="location-info">
-                            <h5><i class="fas fa-map-marker-alt me-2"></i>Pago en Efectivo</h5>
-                            <p class="mb-1">Disponible exclusivamente en:</p>
-                            <p class="mb-0"><strong>Rama Sarmiento (Moreno - Once)</strong></p>
-                            <small>Coordinación horaria por email</small>
-                        </div>
-                        
-                        <div class="row mt-4">
-                            <div class="col-md-6 text-center mb-4">
-                                <h4><i class="fab fa-github me-2"></i>GitHub</h4>
-                                <p><a href="https://github.com/MauroKpoxD" target="_blank">@MauroKpoxD</a></p>
-                            </div>
-                            <div class="col-md-6 text-center mb-4">
-                                <h4><i class="fas fa-envelope me-2"></i>Email</h4>
-                                <p><a href="mailto:sandulientos@protonmail.com">sandulientos@protonmail.com</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-4 p-3 rounded location-info">
-                            <h5 class="text-center mb-3">Información Técnica</h5>
-                            <div class="row text-center">
-                                <div class="col-md-4 mb-2">
-                                    <i class="fas fa-desktop me-2"></i>Windows x64
-                                </div>
-                                <div class="col-md-4 mb-2">
-                                    <i class="fas fa-code me-2"></i>.NET 9
-                                </div>
-                                <div class="col-md-4 mb-2">
-                                    <i class="fas fa-cube me-2"></i>WinForms
-                                </div>
-                            </div>
-                        </div>
+            <div class="cta-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title">¿Listo para Optimizar tu Laboratorio?</h2>
+                        <p class="cta-subtitle">Comienza con nuestra versión de prueba gratuita de 30 días</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contacto.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-download me-2"></i>
+                            Descargar Demo Gratis
+                        </a>
                     </div>
                 </div>
             </div>
@@ -197,23 +231,79 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer py-5">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="images/logo.png" alt="QuimiTech" height="40" class="me-2">
+                        QuimiTech
+                    </div>
+                    <p class="footer-text">
+                        Software especializado en automatización de procesos para laboratorios químicos y estudiantes.
+                    </p>
+                    <div class="footer-meta">
+                        <small><i class="bi bi-windows me-1"></i> Windows 8+ · Portable .exe</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Software</h6>
+                    <ul class="footer-links">
+                        <li><a href="software.html">Características</a></li>
+                        <li><a href="software.html#funciones">Funciones</a></li>
+                        <li><a href="software.html#requisitos">Requisitos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Licencias</h6>
+                    <ul class="footer-links">
+                        <li><a href="licencias.html">Planes</a></li>
+                        <li><a href="licencias.html#pagos">Pagos</a></li>
+                        <li><a href="licencias.html#tyc">Términos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Soporte</h6>
+                    <ul class="footer-links">
+                        <li><a href="soporte.html">FAQ</a></li>
+                        <li><a href="soporte.html#bugs">Reportar Bugs</a></li>
+                        <li><a href="soporte.html#updates">Actualizaciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="footer-title">Contacto</h6>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Email</a></li>
+                        <li><a href="licencias.html#pagos">Métodos de Pago</a></li>
+                        <li><a href="soporte.html">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p>&copy; 2025 QuimiTech Project. Todos los derechos reservados.</p>
+                    <p class="footer-copyright">
+                        &copy; 2025 QuimiTech. v2.0.6 · .NET Framework
+                    </p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="footer-links">
-                        <li><a href="licencias.html">Términos y Condiciones</a></li>
-                        <li><a href="soporte.html">Soporte</a></li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="licencias.html#privacidad">Privacidad</a>
+                        <a href="licencias.html#terminos">Términos</a>
+                        <a href="licencias.html#reembolsos">Reembolsos</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

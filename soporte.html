@@ -1,40 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte Técnico - QuimiTech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Soporte - QuimiTech | FAQ, Bugs y Actualizaciones</title>
+    <meta name="description" content="Soporte técnico de QuimiTech: Preguntas frecuentes, reporte de bugs, guías de uso y políticas de actualización.">
+    <meta name="theme-color" content="#0a1929">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-theme="dark">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-flask me-2"></i>QuimiTech
+                <img src="images/logo.png" alt="QuimiTech Logo" height="40" class="d-inline-block align-text-top me-2">
+                QuimiTech
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="software.html">Software</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="licencias.html">Licencias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="soporte.html">Soporte</a>
+                        <a class="nav-link active" href="soporte.html">Soporte</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link theme-toggle" id="themeToggle">
-                            <i class="fas fa-moon"></i>
-                        </button>
+                        <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
+                
+                <button class="btn btn-outline-primary ms-3" id="themeToggle">
+                    <i class="bi bi-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -42,134 +53,648 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>Soporte Técnico</h1>
-            <p class="hero-subtitle">Asistencia técnica, reporte de bugs y preguntas frecuentes sobre QuimiTech</p>
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="badge bg-primary mb-3">
+                        <i class="bi bi-patch-check me-1"></i>
+                        Soporte Técnico Especializado
+                    </div>
+                    
+                    <h1 class="hero-title mb-4">
+                        Centro de 
+                        <span class="text-primary">Soporte QuimiTech</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle mb-4">
+                        Encuentra respuestas a tus preguntas, reporta problemas y mantente 
+                        actualizado con las últimas versiones del software.
+                    </p>
+
+                    <div class="specs-grid mb-4">
+                        <div class="spec-item">
+                            <i class="bi bi-question-circle text-primary"></i>
+                            <span>FAQ Completa</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-bug text-primary"></i>
+                            <span>Reporte de Bugs</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-arrow-clockwise text-primary"></i>
+                            <span>Actualizaciones</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="bi bi-envelope text-primary"></i>
+                            <span>Soporte por Email</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#faq" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-search me-2"></i>
+                            Ver FAQ
+                        </a>
+                        <a href="#bugs" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-bug me-2"></i>
+                            Reportar Bug
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <div class="support-stats">
+                            <div class="support-stat feature-card m-3">
+                                <div class="stat-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number">48h</div>
+                                    <div class="stat-label">Respuesta Máxima</div>
+                                </div>
+                            </div>
+                            <div class="support-stat feature-card m-3">
+                                <div class="stat-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number">v2.0.6</div>
+                                    <div class="stat-label">Versión Actual</div>
+                                </div>
+                            </div>
+                            <div class="support-stat feature-card m-3">
+                                <div class="stat-icon">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number">Gratis</div>
+                                    <div class="stat-label">Actualizaciones</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Support Section -->
-    <section class="content-section">
+    <!-- Quick Help Section -->
+    <section class="quick-help-section py-5">
         <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Ayuda Rápida</h2>
+                <p class="section-subtitle">Soluciones inmediatas para los problemas más comunes</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Instalación -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-download"></i>
+                        </div>
+                        <h4>Problemas de Instalación</h4>
+                        <p>El software no inicia o muestra errores al ejecutar</p>
+                        <div class="help-solutions">
+                            <div class="solution-item">
+                                <strong>Verifica requisitos:</strong> Windows 8+, 4GB RAM, 500MB espacio
+                            </div>
+                            <div class="solution-item">
+                                <strong>Ejecuta como administrador:</strong> Click derecho → "Ejecutar como administrador"
+                            </div>
+                            <div class="solution-item">
+                                <strong>Windows Defender:</strong> Agrega excepción si es bloqueado
+                            </div>
+                        </div>
+                        <a href="#faq-instalacion" class="btn btn-outline-primary btn-sm mt-3">
+                            Ver Solución Completa
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Licencias -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-key"></i>
+                        </div>
+                        <h4>Activación de Licencia</h4>
+                        <p>Problemas con la activación o licencia expirada</p>
+                        <div class="help-solutions">
+                            <div class="solution-item">
+                                <strong>Demo expirada:</strong> La versión de prueba dura 30 días
+                            </div>
+                            <div class="solution-item">
+                                <strong>Licencia no válida:</strong> Contacta para reactivación
+                            </div>
+                            <div class="solution-item">
+                                <strong>Múltiples dispositivos:</strong> Solo 1 activación simultánea
+                            </div>
+                        </div>
+                        <a href="#faq-licencias" class="btn btn-outline-primary btn-sm mt-3">
+                            Ver Solución Completa
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Funcionalidad -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                        <h4>Errores de Funcionalidad</h4>
+                        <p>El software se cierra inesperadamente o funciones no responden</p>
+                        <div class="help-solutions">
+                            <div class="solution-item">
+                                <strong>Cierre inesperado:</strong> Verifica logs en carpeta del programa
+                            </div>
+                            <div class="solution-item">
+                                <strong>Función no responde:</strong> Reinicia el software
+                            </div>
+                            <div class="solution-item">
+                                <strong>Datos corruptos:</strong> Los cálculos se guardan externamente
+                            </div>
+                        </div>
+                        <a href="#faq-funcionalidad" class="btn btn-outline-primary btn-sm mt-3">
+                            Ver Solución Completa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5 bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Respuestas a las consultas más comunes de nuestros usuarios</p>
+            </div>
+
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <!-- Bug Reporting -->
-                    <div class="support-card">
-                        <div class="support-icon">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <div class="support-content">
-                            <h3>Reportar Bugs y Errores</h3>
-                            <p>Si experimentas crashes, errores o comportamiento inesperado, sigue este procedimiento:</p>
-                            <div class="bug-steps">
-                                <div class="step">
-                                    <span class="step-number">1</span>
-                                    <div class="step-content">
-                                        <h5>Recolectar Logs</h5>
-                                        <p>Localiza y comprime la carpeta <code>/logs</code> generada por la aplicación</p>
-                                    </div>
-                                </div>
-                                <div class="step">
-                                    <span class="step-number">2</span>
-                                    <div class="step-content">
-                                        <h5>Capturar Evidencia</h5>
-                                        <p>Toma capturas de pantalla o graba un video mostrando el error</p>
-                                    </div>
-                                </div>
-                                <div class="step">
-                                    <span class="step-number">3</span>
-                                    <div class="step-content">
-                                        <h5>Enviar Reporte</h5>
-                                        <p>Envía los archivos a <strong>sandulientos@protonmail.com</strong> con una descripción detallada</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ -->
-                    <div class="support-card">
-                        <div class="support-icon">
-                            <i class="fas fa-question-circle"></i>
-                        </div>
-                        <div class="support-content">
-                            <h3>Preguntas Frecuentes</h3>
-                            <div class="faq-list">
-                                <div class="faq-item">
-                                    <h5>¿Qué requisitos de sistema tiene QuimiTech?</h5>
-                                    <p>Windows x64 con .NET 9. Exclusivamente desarrollado para esta plataforma.</p>
-                                </div>
-                                <div class="faq-item">
-                                    <h5>¿Cómo recibo las actualizaciones?</h5>
-                                    <p>Las actualizaciones se entregan via MediaFire. Los usuarios con licencia de lanzamiento reciben actualizaciones gratuitas hasta el 5 de Mayo 2025.</p>
-                                </div>
-                                <div class="faq-item">
-                                    <h5>¿El software es portable?</h5>
-                                    <p>Actualmente requiere configuración manual. Se planea desarrollar un instalador automático en futuras versiones.</p>
-                                </div>
-                                <div class="faq-item">
-                                    <h5>¿Qué hago si el software no inicia?</h5>
-                                    <p>Verifica que tengas .NET 9 instalado y envía un reporte de error con los logs generados.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Roadmap -->
-                    <div class="support-card">
-                        <div class="support-icon">
-                            <i class="fas fa-road"></i>
-                        </div>
-                        <div class="support-content">
-                            <h3>Próximas Características</h3>
-                            <div class="roadmap-list">
-                                <div class="roadmap-item">
-                                    <i class="fas fa-paint-brush"></i>
-                                    <div>
-                                        <h6>Mejoras Gráficas</h6>
-                                        <p>Interfaz más moderna y responsive</p>
-                                    </div>
-                                </div>
-                                <div class="roadmap-item">
-                                    <i class="fas fa-expand"></i>
-                                    <div>
-                                        <h6>Compatibilidad de Pantallas</h6>
-                                        <p>Mejor adaptación a diferentes resoluciones</p>
-                                    </div>
-                                </div>
-                                <div class="roadmap-item">
-                                    <i class="fas fa-robot"></i>
-                                    <div>
-                                        <h6>Más Automatizaciones</h6>
-                                        <p>Nuevas funciones de automatización química</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div class="contact-info support-contact">
-                        <h3 class="text-center">Contacto de Soporte</h3>
-                        <p class="text-center">Para asistencia técnica directa, utiliza los siguientes canales:</p>
+                    <div class="faq-accordion">
+                        <!-- Categoría: Instalación -->
+                        <h3 id="faq-instalacion" class="faq-category mb-4">
+                            <i class="bi bi-download me-2"></i>
+                            Instalación y Requisitos
+                        </h3>
                         
-                        <div class="row mt-4">
-                            <div class="col-md-6 text-center mb-4">
-                                <div class="contact-method">
-                                    <i class="fab fa-github"></i>
-                                    <h4>GitHub</h4>
-                                    <p><a href="https://github.com/MauroKpoxD" target="_blank">@MauroKpoxD</a></p>
-                                    <small>Repositorio del proyecto</small>
+                        <div class="accordion mb-5" id="faqInstallation">
+                            <!-- FAQ 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqInstall1">
+                                        ¿Qué requisitos necesita mi computadora?
+                                    </button>
+                                </h2>
+                                <div id="faqInstall1" class="accordion-collapse collapse show" data-bs-parent="#faqInstallation">
+                                    <div class="accordion-body">
+                                        <strong>Requisitos mínimos:</strong>
+                                        <ul>
+                                            <li><strong>Sistema Operativo:</strong> Windows 8, 10 o 11</li>
+                                            <li><strong>Memoria RAM:</strong> 4 GB (8 GB recomendado)</li>
+                                            <li><strong>Espacio en disco:</strong> 500 MB libres</li>
+                                            <li><strong>.NET Framework:</strong> 4.8 o superior (incluido)</li>
+                                        </ul>
+                                        <strong>Recomendado:</strong> Windows 10/11, 8GB RAM, 1GB espacio libre.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 text-center mb-4">
-                                <div class="contact-method">
-                                    <i class="fas fa-envelope"></i>
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:sandulientos@protonmail.com">sandulientos@protonmail.com</a></p>
-                                    <small>Respuesta en 24 horas</small>
+
+                            <!-- FAQ 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqInstall2">
+                                        ¿Necesito instalar .NET Framework por separado?
+                                    </button>
+                                </h2>
+                                <div id="faqInstall2" class="accordion-collapse collapse" data-bs-parent="#faqInstallation">
+                                    <div class="accordion-body">
+                                        <strong>No, está incluido.</strong> QuimiTech viene con todas las dependencias necesarias. 
+                                        Si tienes .NET Framework 4.8 o superior instalado, el software lo utilizará. 
+                                        Si no, incluye una versión portable que no requiere instalación.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 - NUEVA FAQ SOBRE WINDOWS DEFENDER -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqDefender">
+                                        Windows Defender bloquea el software, ¿es seguro?
+                                    </button>
+                                </h2>
+                                <div id="faqDefender" class="accordion-collapse collapse" data-bs-parent="#faqInstallation">
+                                    <div class="accordion-body">
+                                        <div class="security-alert">
+                                            <div class="alert alert-warning">
+                                                <i class="bi bi-shield-exclamation me-2"></i>
+                                                <strong>Es un falso positivo común - El software es 100% seguro</strong>
+                                            </div>
+                                        </div>
+
+                                        <h6>¿Por qué sucede esto?</h6>
+                                        <p><strong>QuimiTech utiliza un sistema de licencias que necesita comunicación con el servidor 
+                                        para validar activaciones.</strong> Windows Defender es muy estricto con software que realiza 
+                                        conexiones de red, especialmente cuando es portable (.exe) y no está firmado digitalmente 
+                                        con certificado costoso.</p>
+
+                                        <h6>¿Qué debo hacer?</h6>
+                                        <div class="solution-steps">
+                                            <div class="solution-step">
+                                                <div class="step-number">1</div>
+                                                <div class="step-content">
+                                                    <strong>Agregar excepción en Windows Defender</strong>
+                                                    <ol>
+                                                        <li>Abre <strong>Seguridad de Windows</strong></li>
+                                                        <li>Ve a <strong>Protección contra virus y amenazas</strong></li>
+                                                        <li>Haz click en <strong>Configuración de protección contra virus y amenazas</strong></li>
+                                                        <li>Desplázate a <strong>Exclusiones</strong> y haz click en <strong>Agregar o quitar exclusiones</strong></li>
+                                                        <li>Agrega la carpeta donde está QuimiTech como excepción</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+
+                                            <div class="solution-step">
+                                                <div class="step-number">2</div>
+                                                <div class="step-content">
+                                                    <strong>Ejecutar como administrador (Solución rápida)</strong>
+                                                    <ul>
+                                                        <li>Haz click derecho sobre <code>QuimiTech.exe</code></li>
+                                                        <li>Selecciona <strong>"Ejecutar como administrador"</strong></li>
+                                                        <li>Confirma el aviso de Control de Cuentas de Usuario (UAC)</li>
+                                                        <li>Esto generalmente resuelve el bloqueo inmediatamente</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="solution-step">
+                                                <div class="step-number">3</div>
+                                                <div class="step-content">
+                                                    <strong>Verificar en Protección en tiempo real</strong>
+                                                    <ul>
+                                                        <li>Si Windows Defender aún lo bloquea temporalmente:</li>
+                                                        <li>Ve a <strong>Historial de protección</strong></li>
+                                                        <li>Busca QuimiTech en "Elementos en cuarentena"</li>
+                                                        <li>Selecciona <strong>"Permitir en el dispositivo"</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="security-guarantee mt-4">
+                                            <div class="alert alert-success">
+                                                <i class="bi bi-shield-check me-2"></i>
+                                                <strong>Garantía de Seguridad:</strong> QuimiTech no contiene malware, virus, 
+                                                ni software malicioso. El código es revisado y solo realiza conexiones legítimas 
+                                                para validación de licencias. Tu privacidad y seguridad están garantizadas.
+                                            </div>
+                                        </div>
+
+                                        <div class="technical-details">
+                                            <h6>Detalles Técnicos:</h6>
+                                            <ul>
+                                                <li><strong>Tipo de detección:</strong> "Comportamiento sospechoso" o "Aplicación no reconocida"</li>
+                                                <li><strong>Razón:</strong> Software portable + conexiones de red + sin firma digital costosa</li>
+                                                <li><strong>Conexiones:</strong> Solo a servidores legítimos de licencias QuimiTech</li>
+                                                <li><strong>Frecuencia:</strong> Solo durante activación/validación de licencia</li>
+                                                <li><strong>Datos enviados:</strong> Solo ID de licencia (ningún dato personal)</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="support-note">
+                                            <small class="text-muted">
+                                                <i class="bi bi-info-circle me-1"></i>
+                                                Si necesitas ayuda adicional con este proceso, contacta a soporte y te guiaremos paso a paso.
+                                            </small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Categoría: Licencias -->
+                        <h3 id="faq-licencias" class="faq-category mb-4">
+                            <i class="bi bi-credit-card me-2"></i>
+                            Licencias y Activación
+                        </h3>
+                        
+                        <div class="accordion mb-5" id="faqLicensing">
+                            <!-- FAQ 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqLicense1">
+                                        ¿La demo tiene alguna limitación?
+                                    </button>
+                                </h2>
+                                <div id="faqLicense1" class="accordion-collapse collapse show" data-bs-parent="#faqLicensing">
+                                    <div class="accordion-body">
+                                        <strong>La versión demo incluye todas las funciones por 30 días.</strong> 
+                                        Después de este período, el software se bloqueará completamente. 
+                                        No hay limitaciones en cuanto a funcionalidades durante el período de prueba.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 6 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqLicense2">
+                                        ¿Puedo usar el software en varias computadoras?
+                                    </button>
+                                </h2>
+                                <div id="faqLicense2" class="accordion-collapse collapse" data-bs-parent="#faqLicensing">
+                                    <div class="accordion-body">
+                                        <strong>Depende de tu licencia:</strong>
+                                        <ul>
+                                            <li><strong>Demo:</strong> Ilimitado (solo 30 días)</li>
+                                            <li><strong>6 meses / 1 año:</strong> 1 dispositivo activo</li>
+                                            <li><strong>ONE SHOT:</strong> 5 dispositivos diferentes</li>
+                                            <li><strong>KIT Equipo:</strong> 20 licencias individuales</li>
+                                        </ul>
+                                        El software detecta cambios de hardware y puede requerir reactivación.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 7 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqLicense3">
+                                        ¿Qué pasa si formateo mi computadora?
+                                    </button>
+                                </h2>
+                                <div id="faqLicense3" class="accordion-collapse collapse" data-bs-parent="#faqLicensing">
+                                    <div class="accordion-body">
+                                        <strong>Contacta para reactivación.</strong> En caso de formateo o cambio de hardware:
+                                        <ol>
+                                            <li>Envía un email a sandulientos827@protonmail.com</li>
+                                            <li>Indica tu número de licencia o email de compra</li>
+                                            <li>Solicita la reactivación</li>
+                                        </ol>
+                                        Las reactivaciones son gratuitas para licencias válidas.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categoría: Funcionalidad -->
+                        <h3 id="faq-funcionalidad" class="faq-category mb-4">
+                            <i class="bi bi-gear me-2"></i>
+                            Uso y Funcionalidad
+                        </h3>
+                        
+                        <div class="accordion mb-5" id="faqFunctionality">
+                            <!-- FAQ 8 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqFunc1">
+                                        ¿Dónde se guardan mis datos y cálculos?
+                                    </button>
+                                </h2>
+                                <div id="faqFunc1" class="accordion-collapse collapse show" data-bs-parent="#faqFunctionality">
+                                    <div class="accordion-body">
+                                        <strong>QuimiTech no guarda datos internamente.</strong> 
+                                        <ul>
+                                            <li>Los cálculos se muestran en pantalla</li>
+                                            <li>Puedes exportar resultados manualmente</li>
+                                            <li>No hay base de datos interna</li>
+                                            <li>No se requiere backup de datos</li>
+                                        </ul>
+                                        Esto garantiza privacidad y portabilidad total.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 9 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFunc2">
+                                        ¿Puedo usar el software para fines comerciales?
+                                    </button>
+                                </h2>
+                                <div id="faqFunc2" class="accordion-collapse collapse" data-bs-parent="#faqFunctionality">
+                                    <div class="accordion-body">
+                                        <strong>Sí, todos los planes permiten uso comercial.</strong> 
+                                        Puedes utilizar QuimiTech en:
+                                        <ul>
+                                            <li>Laboratorios comerciales</li>
+                                            <li>Empresas de control de calidad</li>
+                                            <li>Consultorías técnicas</li>
+                                            <li>Investigación y desarrollo</li>
+                                        </ul>
+                                        Sin restricciones de uso comercial.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 10 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFunc3">
+                                        El software se cierra inesperadamente, ¿qué hago?
+                                    </button>
+                                </h2>
+                                <div id="faqFunc3" class="accordion-collapse collapse" data-bs-parent="#faqFunctionality">
+                                    <div class="accordion-body">
+                                        <strong>Pasos para solucionar cierres inesperados:</strong>
+                                        <ol>
+                                            <li>Verifica que cumples los requisitos mínimos</li>
+                                            <li>Ejecuta como administrador</li>
+                                            <li>Revisa la carpeta del programa por archivos .log</li>
+                                            <li>Si persiste, contacta con los logs adjuntos</li>
+                                        </ol>
+                                        En la mayoría de casos, ejecutar como administrador resuelve el problema.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reporte de Bugs -->
+    <section id="bugs" class="bugs-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="feature-card">
+                        <h3 class="text-center mb-4">
+                            <i class="bi bi-bug me-2"></i>
+                            Reportar un Error o Bug
+                        </h3>
+                        
+                        <div class="bugs-process">
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h5>Prepara la Información</h5>
+                                        <p>Reúne todos los datos necesarios antes de reportar</p>
+                                        <ul>
+                                            <li>Versión del software (v2.0.6)</li>
+                                            <li>Sistema operativo y versión</li>
+                                            <li>Descripción detallada del problema</li>
+                                            <li>Pasos para reproducir el error</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h5>Busca los Logs</h5>
+                                        <p>Los archivos de registro ayudan a diagnosticar</p>
+                                        <div class="logs-info">
+                                            <strong>Ubicación de logs:</strong>
+                                            <code>C:\Users\[TuUsuario]\AppData\Local\QuimiTech\logs\</code>
+                                            <small class="text-muted d-block mt-1">O en la carpeta donde instalaste el software</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h5>Envía el Reporte</h5>
+                                        <p>Usa el formato correcto para una respuesta rápida</p>
+                                        <div class="email-template">
+                                            <strong>Asunto:</strong> "Bug Report - QuimiTech v2.0.6"<br>
+                                            <strong>Cuerpo debe incluir:</strong>
+                                            <ul>
+                                                <li>Descripción del problema</li>
+                                                <li>Pasos para reproducir</li>
+                                                <li>Comportamiento esperado vs actual</li>
+                                                <li>Capturas de pantalla (si aplica)</li>
+                                                <li>Logs adjuntos</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bugs-actions text-center mt-5">
+                                <a href="mailto:sandulientos827@protonmail.com?subject=Bug Report - QuimiTech v2.0.6&body=Descripción del problema:%0D%0A%0D%0APasos para reproducir:%0D%0A1. %0D%0A2. %0D%0A3. %0D%0A%0D%0AComportamiento esperado:%0D%0A%0D%0AComportamiento actual:%0D%0A%0D%0ASistema: Windows [versión]%0D%0A%0D%0A(Adjunto logs y capturas si están disponibles)" 
+                                   class="btn btn-primary btn-lg">
+                                    <i class="bi bi-envelope me-2"></i>
+                                    Reportar Bug por Email
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actualizaciones -->
+    <section id="updates" class="updates-section py-5 bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Actualizaciones y Versiones</h2>
+                <p class="section-subtitle">Mantente informado sobre las últimas mejoras</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="updates-timeline">
+                        <!-- Versión Actual -->
+                        <div class="update-item current">
+                            <div class="feature-card">
+                                <div class="update-badge badge bg-primary mb-3">Actual</div>
+                                <div class="update-content">
+                                    <h4>v2.0.6 - Versión Estable</h4>
+                                    <div class="update-date">Publicada: Noviembre 2024</div>
+                                    <div class="update-features">
+                                        <h5>Nuevas Características:</h5>
+                                        <ul>
+                                            <li>Análisis cualitativo mejorado</li>
+                                            <li>Calculadora de unidades astronómicas</li>
+                                            <li>Regla de tres simple optimizada</li>
+                                            <li>Cálculos de concentración precisos</li>
+                                        </ul>
+                                    </div>
+                                    <div class="update-notes">
+                                        <strong>Nota:</strong> Todas las licencias pagas reciben esta actualización gratuitamente.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Próximas Versiones -->
+                        <div class="update-item future mt-4">
+                            <div class="feature-card">
+                                <div class="update-badge badge bg-warning mb-3">Próximamente</div>
+                                <div class="update-content">
+                                    <h4>v2.1.0 - En Desarrollo</h4>
+                                    <div class="update-date">Estimada: Diciembre 2024</div>
+                                    <div class="update-features">
+                                        <h5>Planeado:</h5>
+                                        <ul>
+                                            <li>Sistema de exportación de datos</li>
+                                            <li>Mejoras en la interfaz de usuario</li>
+                                            <li>Generación de reportes automáticos</li>
+                                            <li>Más plantillas de cálculo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Política de Actualizaciones -->
+                        <div class="update-policy mt-5">
+                            <div class="feature-card">
+                                <h4 class="text-center mb-4">Política de Actualizaciones</h4>
+                                <div class="policy-items">
+                                    <div class="policy-item">
+                                        <i class="bi bi-download"></i>
+                                        <div>
+                                            <h5>Versión Demo</h5>
+                                            <p>No incluye actualizaciones automáticas</p>
+                                        </div>
+                                    </div>
+                                    <div class="policy-item">
+                                        <i class="bi bi-arrow-clockwise"></i>
+                                        <div>
+                                            <h5>Licencias Pagas</h5>
+                                            <p>Todas las actualizaciones menores y mayores incluidas</p>
+                                        </div>
+                                    </div>
+                                    <div class="policy-item">
+                                        <i class="bi bi-infinity"></i>
+                                        <div>
+                                            <h5>ONE SHOT</h5>
+                                            <p>Actualizaciones gratuitas de por vida</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="cta-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title">¿No Encontraste lo que Buscabas?</h2>
+                        <p class="cta-subtitle">Contáctanos directamente para soporte personalizado</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contacto.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>
+                            Contactar Soporte
+                        </a>
                     </div>
                 </div>
             </div>
@@ -177,23 +702,79 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer py-5">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="images/logo.png" alt="QuimiTech" height="40" class="me-2">
+                        QuimiTech
+                    </div>
+                    <p class="footer-text">
+                        Software especializado en automatización de procesos para laboratorios químicos y estudiantes.
+                    </p>
+                    <div class="footer-meta">
+                        <small><i class="bi bi-windows me-1"></i> Windows 8+ · Portable .exe · v2.0.6</small>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Software</h6>
+                    <ul class="footer-links">
+                        <li><a href="software.html">Características</a></li>
+                        <li><a href="software.html#funciones">Funciones</a></li>
+                        <li><a href="software.html#requisitos">Requisitos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Licencias</h6>
+                    <ul class="footer-links">
+                        <li><a href="licencias.html">Planes</a></li>
+                        <li><a href="licencias.html#pagos">Pagos</a></li>
+                        <li><a href="licencias.html#tyc">Términos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="footer-title">Soporte</h6>
+                    <ul class="footer-links">
+                        <li><a href="soporte.html">FAQ</a></li>
+                        <li><a href="soporte.html#bugs">Reportar Bugs</a></li>
+                        <li><a href="soporte.html#updates">Actualizaciones</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="footer-title">Contacto</h6>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Email</a></li>
+                        <li><a href="licencias.html#pagos">Métodos de Pago</a></li>
+                        <li><a href="soporte.html">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p>&copy; 2025 QuimiTech Project. Todos los derechos reservados.</p>
+                    <p class="footer-copyright">
+                        &copy; 2025 QuimiTech. v2.0.6 · .NET Framework
+                    </p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <ul class="footer-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="licencias.html">Licencias</a></li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="licencias.html#privacidad">Privacidad</a>
+                        <a href="licencias.html#terminos">Términos</a>
+                        <a href="licencias.html#reembolsos">Reembolsos</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
